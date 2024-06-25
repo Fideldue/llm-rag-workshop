@@ -4,7 +4,7 @@ from rag import qa_bot
 
 
 def main():
-    st.title("DTC Q&A System")
+    st.title("RAG workshop")
 
     courses = [
         "data-engineering-zoomcamp",
