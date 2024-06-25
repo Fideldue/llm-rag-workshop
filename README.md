@@ -16,6 +16,7 @@ For this workshop, you need:
 - GitHub account (optional)
 - HuggingFace account (optional)
 
+Updated code from 2024-06-25: https://github.com/alexeygrigorev/llm-rag-workshop-env
 
 # Plan
 
