@@ -2,7 +2,10 @@ from openai import OpenAI
 from elasticsearch import Elasticsearch
 
 
-client = OpenAI()
+client = OpenAI(
+    base_url='http://localhost:11434/v1/',
+    api_key='ollama',
+)
 
 es = Elasticsearch("http://localhost:9200")
 index_name = "course-questions"
@@ -78,7 +81,7 @@ def build_prompt(user_question, documents):
     return prompt
 
 
-def ask_openai(prompt, model="gpt-4o"):
+def ask_openai(prompt, model="phi3"):
     response = client.chat.completions.create(
         model=model,
         messages=[{"role": "user", "content": prompt}]
